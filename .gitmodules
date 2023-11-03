@@ -1,0 +1,3 @@
+[submodule "data/cdb_90"]
+	path = data/cdb_90
+	url = https://github.com/jrnold/CDB90.git
