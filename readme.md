@@ -45,6 +45,13 @@ https://github.com/yvoievid/intro-to-data-science
 `pip install -f dependenices.m1.txt` or `requirements.txt` for not Apple M1 users
 11. Run debug.py script from `src/bin/debug.py` with working directory set equal to the `PROJECT_PATH`
 
+## MLOps Architecture Design
+![simbot-llm-design drawio (2)](https://github.com/Reennon/operation-simulation/assets/37474734/5fc70c16-ee56-4feb-ae38-510fea775676)
+
+## MLOps Architecture Implementation
+![simbot-llm-implementation drawio (3)](https://github.com/Reennon/operation-simulation/assets/37474734/a9f8aa26-cab1-4066-8174-081c3c619774)
+
+## End Result Visualization
 ![image](https://github.com/Reennon/operation-simulation/assets/37474734/ca695198-0fa5-455a-9956-fea4d1a0cd26)
 
  
