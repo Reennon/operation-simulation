@@ -4,11 +4,11 @@ from src.packages.prompts.api_url_prompts import APIURLPromptWithHistory, APIURL
 
 
 class APIResponsePromptWithHistory:
-    template = APIURLPromptWithHistory.template + """ {api_url} 
+    template = APIURLPromptWithHistory.template + """ The endpoint ("API_URL") was used
     
 Given ("API_DOCS"), ("API_URL"), ("API_RESPONSE"), ("QUERY") and ("CHAT_HISTORY"), generate summarization 
-("SUMMARIZATION") of this response, while considering context of conversation ("CHAT_HISTORY") and original user question
-("QUERY")
+("SUMMARIZATION") of this response, while considering context of conversation ("CHAT_HISTORY") and original user 
+question ("QUERY")
 
 QUERY: {query}
 CHAT_HISTORY: {chat_history}
@@ -29,7 +29,7 @@ SUMMARIZATION:"""
 
 
 class APIResponsePromptWithoutHistory:
-    template = APIURLPromptWithoutHistory.template + """ {api_url} 
+    template = APIURLPromptWithoutHistory.template + """ The endpoint ("API_URL") was used
     
 Given ("API_DOCS"), ("API_URL"), ("API_RESPONSE") and ("QUERY"), generate summarization ("SUMMARIZATION") of this 
 response, while considering context of original user question ("QUERY")

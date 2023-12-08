@@ -33,9 +33,8 @@ class ConversationalAPIChain(LLMChain):
 
         if not is_conversational_query:
             response: dict[str, str] = self.api_chain(inputs=inputs)
-            answer: str = response.get(self.api_chain.output_key)
 
-            return answer
+            return response
 
         # Proceed with conversational chain
 

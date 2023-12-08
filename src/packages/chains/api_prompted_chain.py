@@ -37,8 +37,8 @@ class APIPromptedChain(Chain):
     api_answer_chain: LLMChain
     requests_wrapper: TextRequestsWrapper = Field(exclude=True)
     api_docs: str
-    question_key: str = "question"  #: :meta private:
-    output_key: str = "output"  #: :meta private:
+    question_key: str = "query"  #: :meta private:
+    output_key: str = "answer"  #: :meta private:
     limit_to_domains: Optional[Sequence[str]] = None
     """Use to limit the domains that can be accessed by the API chain.
 
@@ -92,7 +92,7 @@ class APIPromptedChain(Chain):
         _run_manager = run_manager or CallbackManagerForChainRun.get_noop_manager()
         question = inputs[self.question_key]
         api_url = self.api_request_chain.predict(
-            question=question,
+            query=question,
             api_docs=self.api_docs,
             callbacks=_run_manager.get_child(),
         )
@@ -109,7 +109,7 @@ class APIPromptedChain(Chain):
             api_response, color="yellow", end="\n", verbose=self.verbose
         )
         answer = self.api_answer_chain.predict(
-            question=question,
+            query=question,
             api_docs=self.api_docs,
             api_url=api_url,
             api_response=api_response,

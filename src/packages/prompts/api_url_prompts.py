@@ -29,7 +29,6 @@ Build the API url in order to get a response that is as short as possible, while
 to answer the question. Pay attention to deliberately exclude any unnecessary pieces of data in the API call.
 
 QUERY: {query}
-CHAT_HISTORY: {chat_history}
 API_DOCS: {api_docs}
 API_URL:"""
 
